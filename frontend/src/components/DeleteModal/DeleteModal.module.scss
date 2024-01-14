@@ -1,0 +1,57 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Modal {
+   border: none !important;
+   position: absolute;
+   inset: 0;
+   background-color: rgba($color: $dark, $alpha: 0.3);
+   @include center;
+   pointer-events: none;
+   opacity: 0;
+
+   & > div {
+      background-color: $dark;
+      border: 1px solid $light !important;
+      padding: 20px !important;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & > h2 {
+         font-weight: 500;
+      }
+
+      & > div {
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         gap: 10px;
+
+         & > button {
+            cursor: pointer;
+            padding: 4px 10px;
+            font-size: 15px;
+            transition: 0.25s;
+
+            &:hover {
+               transform: scale(1.05);
+            }
+
+            &:first-of-type {
+               background-color: transparent;
+               border: 1px solid $red;
+               color: $red;
+               border-radius: 2px;
+            }
+            &:last-of-type {
+               background-color: transparent;
+               border: 1px solid $blue;
+               color: $blue;
+               border-radius: 2px;
+            }
+         }
+      }
+   }
+}

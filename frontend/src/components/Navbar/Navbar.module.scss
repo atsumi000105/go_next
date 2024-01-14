@@ -1,0 +1,58 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Navbar {
+   max-width: 1536px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: $dark;
+   padding: 30px;
+
+   & > .LogoLink {
+      & > .NextLogo {
+         transition: 0.2s;
+         width: 100px;
+
+         &:hover {
+            opacity: 0.8;
+         }
+
+         & > path {
+            fill: $light;
+         }
+      }
+   }
+
+   & > .Menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+
+      & > li {
+         & > a {
+            transition: 0.2s;
+            &:hover {
+               opacity: 0.8;
+            }
+         }
+      }
+
+      & > .CreatePostBtn {
+         & > a {
+            text-decoration: none;
+            font-size: 16px;
+            background-color: $blue;
+            border-radius: 4px;
+            padding: 4px 10px;
+
+            &:hover {
+               background-color: rgba($color: $blue, $alpha: 0.8);
+            }
+         }
+      }
+   }
+}

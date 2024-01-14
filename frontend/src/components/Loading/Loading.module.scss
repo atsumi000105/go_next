@@ -1,0 +1,27 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Main {
+   position: absolute;
+   inset: 0;
+   background-color: $dark;
+   @include center;
+
+   & > .Animation {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid $blue;
+      border-left-color: transparent;
+      animation: animate 1.5s linear infinite;
+   }
+}
+
+@keyframes animate {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}

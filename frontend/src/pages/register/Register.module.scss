@@ -1,0 +1,62 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Container {
+   max-width: 1536px;
+   height: 100%;
+   width: 100%;
+   padding: 0 30px;
+   margin: 0 auto;
+   @include center;
+
+   & > .RegisterInner {
+      margin: auto;
+      @include center;
+      flex-direction: column;
+      gap: 10px;
+
+      & > h1 {
+         font-weight: 600;
+      }
+      & > a {
+         margin-left: auto;
+         font-size: 14px;
+      }
+      & > .Form {
+         display: flex;
+         flex-direction: column;
+         gap: 14px;
+         width: 260px;
+
+         & > input {
+            font-size: 16px;
+            padding: 6px;
+            outline: none;
+            background-color: transparent;
+            color: $light;
+            border: 1px solid $light;
+            border-radius: 2px;
+
+            &::placeholder {
+               color: $light;
+               opacity: 0.7;
+            }
+         }
+         & > button {
+            width: 100%;
+            background-color: $blue;
+            color: $light;
+            border: none;
+            padding: 6px 0;
+            cursor: pointer;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: 0.2s;
+
+            &:hover {
+               background-color: rgba($color: $blue, $alpha: 0.8);
+            }
+         }
+      }
+   }
+}

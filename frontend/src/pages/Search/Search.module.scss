@@ -1,0 +1,52 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Container {
+   max-width: 1536px;
+   height: 100%;
+   width: 100%;
+   padding: 0 30px;
+   margin: 0 auto;
+   @include center;
+
+   & > .CreateInner {
+      margin: auto;
+      @include center;
+      flex-direction: column;
+      gap: 10px;
+
+      & > a {
+         margin-left: auto;
+         font-size: 14px;
+      }
+      & > .table {
+         width: 100%;
+         border-collapse: collapse;
+         background-color: $table-bg-color;
+         th, td {
+           border: 1px solid $table-border-color;
+           padding: 8px;
+           text-align: left;
+         }
+         th {
+           background-color: #e0e0e0;
+         }
+         tr:nth-child(even) {
+           background-color: #fff;
+         }
+   }
+}
+
+@media (width < 540px) {
+   .Container {
+      & > .CreateInner {
+         width: 100%;
+         & > .Form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+         }
+      }
+   }
+}

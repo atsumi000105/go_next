@@ -1,0 +1,102 @@
+@import "../../styles/scss/colors";
+@import "../../styles/scss/mixin";
+
+.Container {
+   flex: 1;
+   padding: 0 30px;
+   max-width: 1536px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   align-items: flex-start;
+
+   & > div {
+      border: 1px solid $light;
+      padding: 20px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      & > div:first-of-type {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         border-bottom: 1px solid rgba($color: $light, $alpha: 0.2);
+         padding-bottom: 5px;
+         & > h2 {
+            color: $blue;
+            font-weight: bold;
+         }
+         & > span {
+            text-transform: uppercase;
+            padding: 2px 4px;
+            border-radius: 2px;
+         }
+      }
+      & > span {
+         margin-top: 10px;
+         display: inline-flex;
+         font-size: 18px;
+      }
+      & > p {
+         margin-top: 2px;
+         display: inline-flex;
+         font-size: 14px;
+         color: rgba($color: $light, $alpha: 0.7);
+      }
+      & > div:last-of-type {
+         margin-top: 20px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         font-size: 14px;
+
+         & > a {
+            text-decoration: none;
+            & > span {
+               text-transform: uppercase;
+               border: 1px solid $blue;
+               padding: 2px 4px;
+               border-radius: 2px;
+            }
+         }
+         & > div {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+
+            & > button,
+            & > a {
+               @include center;
+               width: 28px;
+               height: 28px;
+               font-size: 18px;
+               background-color: transparent;
+               border-radius: 2px;
+               cursor: pointer;
+               transition: 0.25s;
+               text-decoration: none;
+
+               &:hover {
+                  transform: scale(1.05);
+               }
+            }
+            & > button {
+               margin-left: auto;
+               border: 1px solid $red;
+               color: $red;
+            }
+            & > a {
+               font-size: 22px;
+               border: 1px solid $blue;
+               color: $blue;
+            }
+         }
+      }
+   }
+   & > h1 {
+      display: inline-flex;
+      margin: auto;
+   }
+}
